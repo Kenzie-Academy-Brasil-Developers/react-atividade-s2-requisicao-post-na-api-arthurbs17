@@ -4,14 +4,14 @@ import Display from "./components/Display";
 import Login from "./components/Login";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState();
   const [showStatus, setShowStatus] = useState(false);
 
   return (
     <div className="App">
       <header className="App-header">
         <Login setIsLoggedIn={setIsLoggedIn} setShowStatus={setShowStatus} />
-        {showStatus === true ? <Display isLoggedIn={isLoggedIn} /> : null}
+        {showStatus ? <Display isLoggedIn={isLoggedIn} /> : null}
       </header>
     </div>
   );

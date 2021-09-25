@@ -20,13 +20,12 @@ const Login = ({ setIsLoggedIn, setShowStatus }) => {
     axios
       .post("https://kenzieshop.herokuapp.com/sessions/", data)
       .then((response) => {
-        if (response.statusText === "OK") {
-          setIsLoggedIn(true);
-        }
+        setIsLoggedIn(true);
         console.log(response);
       })
       .catch((error) => {
         console.log(error);
+        setIsLoggedIn(false);
       });
     setShowStatus(true);
     console.log(data);

@@ -2,7 +2,7 @@ import { Paper } from "@material-ui/core";
 const Display = ({ isLoggedIn }) => {
   return (
     <div>
-      {isLoggedIn === true ? (
+      {isLoggedIn ? (
         <Paper>
           <p>Usuário existente</p>
         </Paper>
